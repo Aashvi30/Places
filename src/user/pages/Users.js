@@ -6,7 +6,8 @@ const Users = () => {
     {
       id: 'u1',
       name: 'Aashvi',
-      image: 'https://images.unsplash.com/photo-1503023345310-bd7c1de61c7d',
+      image: 'https://media.istockphoto.com/id/539018660/photo/taj-mahal-hotel-and-gateway-of-india.jpg?s=612x612&w=0&k=20&c=L1LJVrYMS8kj2rJKlQMcUR88vYoAZeWbYIGkcTo6QV0=',
+
       places: 1
     }
   ];
