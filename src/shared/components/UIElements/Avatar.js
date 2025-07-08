@@ -7,7 +7,6 @@ const Avatar = props => {
       <img
         src={props.image}
         alt={props.alt}
-        className="avatar-image"
       />
     </div>
   );
