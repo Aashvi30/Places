@@ -1,3 +1,18 @@
+.main-navigation {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: #f50057;
+  padding: 0 2rem;
+  height: 4rem;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.26);
+  overflow: hidden;
+}
+
+/* Menu button */
 .main-navigation__menu-btn {
   width: 3rem;
   height: 3rem;
@@ -6,7 +21,7 @@
   display: flex;
   flex-direction: column;
   justify-content: space-around;
-  margin-right: 2rem;
+  margin-right: 1rem;
   cursor: pointer;
 }
 
@@ -17,23 +32,59 @@
   background: white;
 }
 
+/* Title */
 .main-navigation__title {
-  color: white;
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin: 0;
 }
 
 .main-navigation__title a {
   text-decoration: none;
   color: white;
+ 
 }
 
+/* Desktop nav */
 .main-navigation__header-nav {
   display: none;
+  height: 60%;
 }
 
-.main-navigation__drawer-nav {
+.main-navigation__header-nav ul {
+  display: flex;
+  gap: 1rem;
+  list-style: none;
+  margin: 0;
+  padding: 0;
   height: 100%;
 }
 
+.main-navigation__header-nav li {
+  height: 100%;
+  display: flex;
+  align-items: center;
+}
+
+.main-navigation__header-nav li a {
+  text-decoration: none;
+  color: white;
+  font-weight: 500;
+  padding: 0 1rem;
+  display: flex;
+  align-items: center;
+  height: 100%;
+  transition: background 0.3s, color 0.3s;
+  box-sizing: border-box;
+}
+
+.main-navigation__header-nav li a:hover,
+.main-navigation__header-nav li a.active {
+  background: #ffeb3b;
+  color: black;
+}
+
+/* Show nav on larger screens */
 @media (min-width: 768px) {
   .main-navigation__menu-btn {
     display: none;
