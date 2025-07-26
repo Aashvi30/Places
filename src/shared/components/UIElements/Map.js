@@ -4,7 +4,7 @@ import { GoogleMap, Marker, useLoadScript } from '@react-google-maps/api';
 
 const Map = (props) => {
   const { isLoaded, loadError } = useLoadScript({
-    googleMapsApiKey: 'AIzaSyAJVAF7V31SoMu58F7NzTe283B6Jwlq3d0', // ✅ Only the API key, not the full URL
+    googleMapsApiKey: 'AIzaSyCWAb02XJc1YPsrcGz0uli_IEMn6fyJYl4', // ✅ Only the API key, not the full URL
   });
 
   const center = props.center || { lat: 28.6139, lng: 77.2090 }; // Delhi default
@@ -14,7 +14,7 @@ const Map = (props) => {
   if (!isLoaded) return <div>Loading Maps...</div>;
 
   return (
-    <div className={`map ${props.className}`} style={props.style}>
+    <div className={`map ${props.className}`} style={props.style || {width: '100%', height: '100%' }}>
       <GoogleMap
         mapContainerStyle={{ width: '100%', height: '100%' }}
         center={center}
